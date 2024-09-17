@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "device": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "integer"
+            },
+            "ip": {
+              "type": "string"
+            },
+            "littlewordendian": {
+              "type": "boolean"
+            },
+            "name": {
+              "type": "string"
+            },
+            "port": {
+              "type": "integer"
+            },
+            "protocol": {
+              "type": "string"
+            },
+            "coils": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "input": {
+                      "type": "boolean"
+                    },
+                    "number": {
+                      "type": "integer"
+                    },
+                    "alarmmapping": {
+                      "type": "object",
+                      "properties": {
+                        "severity": {
+                          "type": "string"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "severity",
+                        "text",
+                        "type"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "input",
+                    "number",
+                    "alarmmapping"
+                  ]
+                }
+              ]
+            },
+            "registers": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "decimalshiftright": {
+                      "type": "integer"
+                    },
+                    "divisor": {
+                      "type": "integer"
+                    },
+                    "input": {
+                      "type": "boolean"
+                    },
+                    "multiplier": {
+                      "type": "integer"
+                    },
+                    "nobits": {
+                      "type": "integer"
+                    },
+                    "number": {
+                      "type": "integer"
+                    },
+                    "signed": {
+                      "type": "boolean"
+                    },
+                    "startbit": {
+                      "type": "integer"
+                    },
+                    "measurementmapping": {
+                      "type": "object",
+                      "properties": {
+                        "templatestring": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "templatestring"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "decimalshiftright",
+                    "divisor",
+                    "input",
+                    "multiplier",
+                    "nobits",
+                    "number",
+                    "signed",
+                    "startbit",
+                    "measurementmapping"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "datatype": {
+                      "type": "string"
+                    },
+                    "decimalshiftright": {
+                      "type": "integer"
+                    },
+                    "divisor": {
+                      "type": "integer"
+                    },
+                    "input": {
+                      "type": "boolean"
+                    },
+                    "multiplier": {
+                      "type": "integer"
+                    },
+                    "nobits": {
+                      "type": "integer"
+                    },
+                    "number": {
+                      "type": "integer"
+                    },
+                    "signed": {
+                      "type": "boolean"
+                    },
+                    "startbit": {
+                      "type": "integer"
+                    },
+                    "measurementmapping": {
+                      "type": "object",
+                      "properties": {
+                        "templatestring": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "templatestring"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "datatype",
+                    "decimalshiftright",
+                    "divisor",
+                    "input",
+                    "multiplier",
+                    "nobits",
+                    "number",
+                    "signed",
+                    "startbit",
+                    "measurementmapping"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "address",
+            "ip",
+            "littlewordendian",
+            "name",
+            "port",
+            "protocol",
+            "coils",
+            "registers"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "device"
+  ]
+}
